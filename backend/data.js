@@ -7,6 +7,8 @@ const data = {
             image:'/images/pic1.jpg',
             brand:'Battery',
             price:'3200',
+            rating: 4.5,
+            numReviews: 10,
             description: ' ',
         },
         {
@@ -16,6 +18,8 @@ const data = {
             image:'/images/pic2.jpg',
             brand:'Nutrend',
             price:'10500',
+            rating: 4.5,
+            numReviews: 10,
             description: ' ',
         },
         {
@@ -25,6 +29,8 @@ const data = {
             image:'/images/pic3.jpg',
             brand:'Battery',
             price:'2000',
+            rating: 4.0,
+            numReviews: 10,
             description: ' ',
         },
         {
@@ -34,6 +40,8 @@ const data = {
             image:'/images/pic4.jpg',
             brand:'Olimp',
             price:'2500',
+            rating: 4.0,
+            numReviews: 10,
             description: ' ',
         },
     ]
