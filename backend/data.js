@@ -10,6 +10,7 @@ const data = {
             rating: 4.5,
             numReviews: 10,
             description: ' ',
+            countInStock: 58,
         },
         {
             name: 'NUTREND 100% WHEY PROTEIN 2250g',
@@ -21,6 +22,7 @@ const data = {
             rating: 4.5,
             numReviews: 10,
             description: ' ',
+            countInStock: 58,
         },
         {
             name: 'Battery creatine 250g',
@@ -32,6 +34,7 @@ const data = {
             rating: 4.0,
             numReviews: 10,
             description: ' ',
+            countInStock: 58,
         },
         {
             name: 'OLIMP BCAA XPLODE POWDER',
@@ -43,6 +46,7 @@ const data = {
             rating: 4.0,
             numReviews: 10,
             description: ' ',
+            countInStock: 0,
         },
     ]
 };
