@@ -1,10 +1,10 @@
 const data = {
     products: [
         {
-            _id: '1',
+            //_id: '1',
             name: 'Battery whey protein 800g',
             category:'Protein',
-            slang: 'bat-whey',
+            slug: 'bat-whey',
             image:'/images/pic1.jpg',
             brand:'Battery',
             price:'3200',
@@ -14,10 +14,10 @@ const data = {
             countInStock: 58,
         },
         {
-            _id: '2',
+            //_id: '2',
             name: 'NUTREND 100% WHEY PROTEIN 2250g',
             category:'Protein',
-            slang: 'nut-whey',
+            slug: 'nut-whey',
             image:'/images/pic2.jpg',
             brand:'Nutrend',
             price:'10500',
@@ -27,10 +27,10 @@ const data = {
             countInStock: 58,
         },
         {
-            _id: '3',
+            //_id: '3',
             name: 'Battery creatine 250g',
             category:'Creatine',
-            slang: 'bat-cre',
+            slug: 'bat-cre',
             image:'/images/pic3.jpg',
             brand:'Battery',
             price:'2000',
@@ -40,10 +40,10 @@ const data = {
             countInStock: 58,
         },
         {
-            _id: '4',
+            //_id: '4',
             name: 'OLIMP BCAA XPLODE POWDER',
             category:'BCAA',
-            slang: 'oli-bcaa',
+            slug: 'oli-bcaa',
             image:'/images/pic4.jpg',
             brand:'Olimp',
             price:'2500',

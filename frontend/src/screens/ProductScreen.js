@@ -14,7 +14,7 @@ import MessageBox from '../Components/MessageBox';
 import { getError } from '../util';
 import { Store } from '../Store';
 
-
+//s
 const reducer = (state, action) => {
   switch(action.type) {
     case 'FETCH_REQUEST':
@@ -31,7 +31,7 @@ const reducer = (state, action) => {
 function ProductScreen() {
   const navigate = useNavigate();
   const params = useParams();
-  const { slang } = params;
+  const { slug } = params;
   const [{loading, error, product}, dispatch] = useReducer(reducer, {
     product: [],
     loading: true,
@@ -42,7 +42,7 @@ function ProductScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/slang/${slang}`);
+        const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err)});
@@ -50,7 +50,7 @@ function ProductScreen() {
       
     };
     fetchData();
-  }, [slang]);
+  }, [slug]);
 
   const {state, dispatch: ctxDispatch} = useContext(Store);
   const {cart} = state;
