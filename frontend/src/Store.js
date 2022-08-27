@@ -11,6 +11,9 @@ const initialState = {
     shippingAddress: localStorage.getItem('shippingAddress')
       ? JSON.parse(localStorage.getItem('shippingAddress'))
       : {},
+    paymentMethod: localStorage.getItem('paymentMethod')
+      ? localStorage.getItem('paymentMethod')
+      : '',
     cartItems: localStorage.getItem('cartItems')
       ? JSON.parse(localStorage.getItem('cartItems'))
       : [],
@@ -18,18 +21,18 @@ const initialState = {
 };
 
 function reducer(state, action) {
-    switch (action.type) {
-      case 'CART_ADD_ITEM':
-        const newItem = action.payload;
-        const existItem = state.cart.cartItems.find(
-          (item) => item._id === newItem._id
-        );
-        const cartItems = existItem
-          ? state.cart.cartItems.map((item) =>
-              item._id === existItem._id ? newItem : item
-            )
-          : [...state.cart.cartItems, newItem];
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+ switch (action.type) {
+  case 'CART_ADD_ITEM':
+    const newItem = action.payload;
+    const existItem = state.cart.cartItems.find(
+      (item) => item._id === newItem._id 
+   );
+   const cartItems = existItem
+    ? state.cart.cartItems.map((item) =>
+      item._id === existItem._id ? newItem : item
+    )
+   : [...state.cart.cartItems, newItem];
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
         return { ...state, cart: { ...state.cart, cartItems } };
       case 'CART_REMOVE_ITEM': {
           const cartItems = state.cart.cartItems.filter(
@@ -47,6 +50,7 @@ function reducer(state, action) {
           cart: {
             cartItems: [],
             shippingAddress: {},
+            paymentMethod: '',
           },
         };
       case 'SAVE_SHIPPING_ADDRESS':
@@ -56,6 +60,11 @@ function reducer(state, action) {
             ...state.cart,
             shippingAddress: action.payload,
           },
+        };
+      case 'SAVE_PAYMENT_METHOD':
+        return {
+          ...state,
+          cart: { ...state.cart, paymentMethod: action.payload },
         };
       default:
         return state;
