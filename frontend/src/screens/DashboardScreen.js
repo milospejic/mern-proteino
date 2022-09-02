@@ -60,7 +60,7 @@ export default function DashboardScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-          <Row>
+          <Row className="info">
             <Col md={4}>
               <Card>
                 <Card.Body>

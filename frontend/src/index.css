@@ -11,10 +11,16 @@ body {
 }
 main {
   flex: 1;
+  background-color: #000000;
+  color: white;
+}
+.table{
+  color: white;
 }
 .btn-primary, .btn-outline-primary {
-  background-color: #f0c040;
-  color: #000000;
+  background-color: #018786;
+  color: #ffffff;
+  border: #018771;
 }
 .products {
   display: flex;
@@ -28,9 +34,11 @@ main {
   border: 1px #404040 solid;
   margin: 1rem;
 }
+
 .product img {
   width: 100%;
   max-width: 500px;
+  
 }
 .product-info {
   padding: 1rem;
@@ -43,6 +51,7 @@ main {
 }
 .small-container {
   max-width: 600px;
+  color: white;
 }
 
 .checkout-steps > div {
@@ -50,8 +59,10 @@ main {
   color: #a0a0a0;
 }
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #f08000;
-  color: #f08000;
+  border-bottom: 0.2rem solid #018771;
+  
+  color:  #018771;
+  ;
 }
 
 .navbar-brand {
@@ -79,3 +90,8 @@ main {
 .text-bold {
   font-weight: bold;
 }
+
+.info{
+  color: #000000;
+}
+

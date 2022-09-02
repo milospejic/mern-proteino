@@ -88,7 +88,7 @@ function App() {
                 <SearchBox />
                 <Nav className="me-auto w-100 justify-content-end">
                   <Link to="cart" className="nav-link">
-                    Cart
+                    <i class="fa fa-shopping-cart"></i>
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
                         {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
@@ -114,7 +114,7 @@ function App() {
                     </NavDropdown>
                   ) : (
                     <Link className="nav-link" to="/signin">
-                      Sign In
+                      <i className="fa fa-user"></i>
                     </Link>
                   )}
                   {userInfo && userInfo.isAdmin && (

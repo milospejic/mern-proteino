@@ -196,7 +196,7 @@ export default function OrderScreen() {
         <title>Order {orderId}</title>
       </Helmet>
       <h1 className="my-3">Order {orderId}</h1>
-      <Row>
+      <Row className="info">
         <Col md={8}>
           <Card className="mb-3">
             <Card.Body>
